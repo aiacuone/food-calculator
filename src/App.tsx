@@ -25,7 +25,7 @@ export default function App() {
   return (
     <div className="app">
       <header>
-        <h1>Food Converter</h1>
+        <h1>Food Calculator</h1>
         <div className="units" role="radiogroup" aria-label="Weight unit">
           {UNITS.map((u) => (
             <button key={u} type="button" role="radio" aria-checked={unit === u} className={unit === u ? 'on' : ''} onClick={() => setUnit(u)}>

@@ -1,32 +1,22 @@
-# React + TypeScript + Vite
+# Food Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Work out how much food reaches a carb, protein, fat or calorie target, convert between raw and cooked weights, and check the macros of what you're eating.
 
-Currently, two official plugins are available:
+## Run it
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Open the address Vite prints. Use `npm run dev -- --host` to open it on a phone on the same Wi-Fi.
+
+## Other commands
+
+- `npm test` runs the unit tests
+- `npm run build` type-checks and builds to `dist/`
+- `npm run lint` runs the linter
+
+## Food data
+
+Foods live in `src/data/foods.ts`. Per-100g values come from USDA FoodData Central. Cooked/raw weight ratios are typical home-cooking estimates.
